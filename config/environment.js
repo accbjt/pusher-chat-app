@@ -43,5 +43,10 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' http://iamplus.dev:49152",
+    'connect-src': "'self' wss://ws.pusherapp.com ws://iamplus.dev:49152",
+  }
+
   return ENV;
 };
